@@ -1,0 +1,12 @@
+@mixin display3 ($property, $justify, $align-items){
+    display: $property;
+    justify-content: $justify;
+    align-items: $align-items;
+}
+@mixin display2 ($property, $justify){
+    display: $property;
+    justify-content: $justify;
+}
+@mixin display1 ($property){
+    display: $propert;
+}
