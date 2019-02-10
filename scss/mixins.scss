@@ -10,3 +10,9 @@
 @mixin display1 ($property){
     display: $propert;
 }
+@mixin display4 ($property, $justify, $align-items,$direction){
+    display: $property;
+    justify-content: $justify;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
