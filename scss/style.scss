@@ -2,7 +2,572 @@
 @import 'variable';
 @import 'private';
 @import 'mixins';
-
-body{
-    background-color: purple;
+@import 'fonts';
+@import "media";
+html{
+	@extend %dosis;
 }
+header{
+	height: 800px;
+	margin-bottom: 120px;
+	.background-image{
+		background-image: url("https://www.siif.fr/en/wp-content/uploads/sites/4/2018/05/header_telemaintenance-1920x700.jpg");
+		position: relative;
+		color: blue;
+		height: 700px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+	}
+	.header-section{
+		background-color: #223047;
+		opacity: 0.9;
+		position: relative;
+		// width: 1170px;
+		height: 700px;
+		margin: auto;
+		
+		.logo{
+			font-size: 35px;
+			color: $main-color;
+		
+		}
+		nav{
+			position: sticky;
+			top: 0;
+			height: 70px;
+			border-bottom: solid 1px gray;
+			margin-bottom: 130px;
+			background-color: #223047;
+			@include display3(flex,space-around,center);
+			.font-size-15{
+				font-size: 15px;
+			}
+			.nav-ul{
+				.nav-ul-li{
+					margin-right: 25px;
+				}
+				@include display3(flex,space-between,center);
+				.ul-ul{
+					@include display3(flex,space-between,center);
+					li{
+						a{
+							img{
+								height: 4px;
+								width: 7px;
+								margin: 0 30px 0 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.header-middle{
+		width: 980px;
+		margin: auto;
+		@include display3(flex,space-between,center);
+		.header-middle-texts{
+			margin-top: -100px;
+			.header-middle-texts-title{
+				font-size: 40px;
+				margin-bottom: 60px;
+				color: $white;
+			}
+			.header-middle-texts-article{
+				font-size: 15px;
+				margin-bottom: 60px;
+				color: $white;
+			}
+			.header-middle-texts-btn{
+				.btn-reach-out{
+					font-size: 15px;
+					height: 40px;
+					width: 140px;
+					margin-left:30px;
+				}
+			}
+		}
+		.header-middle-img{
+			.header-phone{
+				height: 580px;
+			}
+		}
+	}
+}
+.btn-color{
+	background-color: $main-color;
+	font-size: 15px;
+	height: 40px;
+	width: 130px;
+	&:hover{
+		background-color: purple;
+	}
+}
+.btn-download-free{
+	background-color: $main-color;
+	font-size: 15px;
+	height: 40px;
+	width: 170px;
+	&:hover{
+		background-color: pink;
+	}
+}
+.color-white{
+	color: $white;
+}
+.section-2{
+	.section-2-wrapper{
+		width: 1080px;
+		margin: auto;
+		.section-2-div-title{
+			@include display4(flex,none,center,column);
+			margin-bottom: 80px;
+			p{
+				font-size: 30px;
+			}
+		}
+		.section-2-line{
+			margin: auto;
+			margin-bottom: 80px;
+			width: 100px;
+			height: 3px;
+			background-color: $main-color;
+		}
+		.items-section-2{
+			@include display3(flex,space-between,center);
+			margin-bottom: 120px;
+			.section-2-item{
+				@include display4(flex,space-around,center,column);
+				height: 320px;
+				width: 270px;
+				margin-right: 30px;
+				padding: 10px;
+				border: solid 1px #E9EAEC;
+				border-radius: 10px;
+				box-shadow: 2px 2px rgb(235, 237, 240);
+				img{
+					height: 106px;
+				}
+				.section-2-item-title{
+					font-size: 18px;
+				}
+				.section-2-item-article{
+					font-size: 14px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.section-3{
+	@include display3(flex,space-between,center);
+	margin-bottom: 100px;
+	.section-3-img{
+		height: 400px;
+	}
+	.section-3-div-text{
+		@include display4(flex,space-around,none,column);
+		height: 400px;
+		width: 100%;
+		background-color: #F5F6FA;
+		.section-3-div-text-title{
+			font-size: 30px;
+			margin: 100px 0 0 120px;
+		}
+		.section-3-div-text-article{
+			font-size: 15px;
+			margin: 0 0 100px 110px;
+		}
+	}
+}
+
+.section-4{
+	height: 450px;
+	.section-4-wrapper{
+		@include display3(flex,space-between,center);
+		width: 1050px;
+		height: 400px;
+		margin: auto;
+		.section-4-texts{
+			@include display4(flex,space-between,center,column);
+			align-items: flex-end;
+			.section-4-div-title{
+				font-size: 35px;
+			}
+			.section-4-div-article{
+				margin: 50px 0 50px 0;
+				width: 400px;
+				text-align: right;
+			}
+		}
+		.section-4-img{
+			img{
+				width: 530px;
+			}
+		}
+	}
+}
+
+.section-5{
+	height: 600px;
+	.section-5-wrapper{
+		@include display3(flex,space-between,center);
+		width: 1050px;
+		margin: auto;
+		.section-5-phone-2{
+			.phone-2{
+				transform: rotate(4deg);
+				height: 550px;
+				position: relative;
+			}
+		}
+		.section-5-items{
+
+			.item-section-5{
+				// @include display3(flex,none,center);
+				width: 540px;
+				height: 80px;
+				border: solid 1px gray;
+				margin-bottom: 20px;
+				.unhide-items{
+					height: 50px;
+					@include display3(flex,none,center);
+					.visible-img{
+						margin: 0 20px 0 25px;
+						height: 25px;
+					}
+					.visible-text{
+						font-size: 18px;
+					}
+				}
+				.hidden-text{
+					visibility: hidden;
+				}
+				&:hover{
+					height: 135px;
+					background-color: $main-color;
+					.hidden-text{
+						visibility: visible;
+						margin-left: 80px;
+						width: 375px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-6{
+	height: 530px;
+	background-color: #F5F6FA;
+	// padding-top: 140px;
+	.section-6-wrapper{
+		@include display3(flex,space-between,center);
+		width: 1140px;
+		height: 100%;
+		margin: auto;
+		align-items: flex-end;
+		.section-6-texts{
+			text-align: right;
+			width: 470px;
+			margin-bottom: 100px;
+			.section-6-texts-title{
+				font-size: 30px;
+				margin-bottom: 50px;
+			}
+			.android-iphone{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				:last-child{
+					:last-child{
+						padding-right: 10px;
+					}
+				}
+				div{
+					@include display3(flex,space-between,center);
+					width: 100px;
+					padding-right: 20px;
+					margin-bottom: 25px;
+					img{
+						height: 15px;
+						padding: 1px; 
+						border-radius: 30px;
+						background-color: $main-color;
+					}
+				}
+			}
+			.section-6-texts-article{
+				margin-top: 40px;
+			}
+		}
+		.section-6-imgs{
+			display: flex;
+			height: 450px;
+			width: 500px; 
+			.left-screen{
+				position: absolute;
+				height: 330px;
+				width: 190px;
+				margin-top: 120px;
+			}
+			.middle-screen{
+				position: relative;
+				margin-left: 115px;
+			}
+			.right-screen{
+				position: absolute;
+				height: 320;
+				width: 180px;
+				margin: 130px 0 0 300px;
+			}
+		}
+	}
+}
+
+.section-7{
+	height: 680px;
+	width: 100%;
+	.video{
+		height: 100%;
+		width: 100;
+		background-color: #223047;
+		opacity: 0.9;
+		// position: absolute;
+		.samsung-video{
+			position: absolute;
+
+		}
+		.video-titles{
+			@include display4(flex,none,center,column);
+			padding-top: 200px;
+			position: relative;
+			img{
+				height: 50px;
+				width: 50px;
+				margin-bottom: 30px;
+				&:hover{
+					height: 60px;
+					width: 60px;
+				}
+				
+			}
+			.watch-video{
+				font-size: 20px;
+				margin-bottom: 40px;
+				text-transform: uppercase;
+				color: white;
+			}
+			.video-article{
+				width: 780px;
+				text-align: center;
+				color: white;
+			}
+		}
+	}
+}
+
+.section-8{
+	height: 650px;
+	background-image: url("http://appcodin.com/wp-content/uploads/2016/05/banner-img-1920x650.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.section-8-img{
+		@include display4(flex,none,center,column);
+		.section-8-title{
+			margin-top: 250px;
+			font-size: 30px;
+		}
+		.section-8-article{
+			margin-top: 30px;
+			font-size: 20px;
+		}
+		.download{
+			margin-top: 70px;
+			background-color: $main-color;
+			font-size: 13px;
+			height: 40px;
+			width: 130px;
+			text-transform: uppercase;
+			box-shadow: 0 3px 3px 3px #EEFFFE;
+			&:hover{
+				background-color: yellowgreen;
+			}
+		}
+	}
+	
+}
+
+.section-9{
+	background-image: url("http://www.medisked.com/wp-content/uploads/2018/09/Comparison-Image-1920x350.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 350px;
+	.section-9-img{
+		height: 100%;
+		background-color: #223047;
+		opacity: 0.9;
+		position: relative;
+		@include display4(flex,none,center,column);
+		.section-9-article{
+			text-align: center;
+			width: 700px;
+			color: $main-color;
+			margin-top: 130px;
+		}
+	}
+}
+
+
+.section-10{
+	height: 700px;
+	background-color: #F5F6FA;
+	.section-10-wrapper{
+		@include display2(flex,space-between);
+		width: 1000px;
+		margin: auto;
+		.section-10-imgs{
+			padding-top: 70px;
+			width: 380px;
+			.phone-3{
+				height: 500px;
+				position: absolute;
+			}
+			.phone-4{
+				position: absolute;
+				margin: 80px 0 0 170px;
+				height: 400px;
+			}
+		}
+		.section-10-texts{
+			margin-top: 200px;
+			width: 480px;
+			.section-10-texts-title{
+				font-size: 40px;
+				margin-bottom: 30px;
+			}
+			.section-10-texts-article{
+				font-size: 18px;
+				width: 470px;
+				margin-bottom: 30px;
+			}
+			.section-10-store{
+				@include display2(flex,space-between);
+				width: 250px;
+				img{
+					height: 30px;
+					&:hover{
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-11{
+	height: 675px;
+	margin-bottom: 100px;
+	.between-section-btn{
+		@include display2(flex,center);
+		.app-today{
+			margin-top: -35px;
+			background-color: $main-color;
+			font-size: 13px;
+			height: 70px;
+			width: 370px;
+			text-transform: uppercase;
+			box-shadow: 0 5px 5px 5px #EEFFFE;
+			&:hover{
+				background-color: blueviolet;
+			}
+		}
+	}
+	.section-11-wrapper{
+		width: 1100px;
+		margin: auto;
+		.section-11-first-part{
+			margin-top: 140px;
+			@include display3(flex,space-between,center);
+			.section-11-item-1{
+				height: 150px;
+				margin-bottom: 130px;
+				h3{
+					font-size: 18px;
+					margin-bottom: 30px;
+				}
+				a{
+					font-size: 15px;
+					p{
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+		.section-11-second-part{
+			@include display4(flex,none,center,column);
+			h1{
+				font-size: 35px;
+				margin-bottom: 25px;
+			}
+			p{
+				font-size: 15px;
+				margin-bottom: 70px;
+			}
+			.btn-write{
+				.inp-text{
+					height: 50px;
+					width: 570px;
+					margin-right: 30px;
+				}
+				.count-me-in{
+					background-color: $main-color;
+					font-size: 18px;
+					height: 50px;
+					width: 170px;
+					text-transform: uppercase;
+					box-shadow: 0 5px 5px 5px #C2FFFA;
+					&:hover{
+						background-color: gainsboro;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+footer{
+	height: 100px;
+	background-color: #223047;
+	.footer-wrapper{
+		@include display3(flex,space-between,center);
+		width: 1140px;
+		margin: auto;
+		height: 100%;
+		.footer-text{
+			font-size: 18px;
+			color: $main-color;
+		}
+		.footer-icons{
+			img{
+				height: 25px;
+				margin-left: 60px;
+				&:hover{
+					height: 35px;
+					
+				}
+			}
+		}
+	}
+}
+
+
+
+

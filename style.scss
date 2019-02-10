@@ -1,0 +1,68 @@
+@import 'reset';
+@import 'variable';
+@import 'private';
+@import 'mixins';
+
+.wrapper{
+    width: 1170px;
+    margin: auto;
+    padding: 30px 0;
+}
+.wrapper2{
+    width: 900px;
+    margin: auto;
+    padding: 50px 0;
+}
+.flex-between-center{
+    @include display3(flex,space-between,center)
+}
+.flex-between{
+    @include display2(flex,space-between)
+}
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', monospace;
+}
+.nav-li{
+    margin-left: 130px;
+    text-transform: uppercase;
+    a{
+        @extend %main-color;
+        @extend %main-font;
+        &:hover{
+            color:$hover-color;
+        }
+    }
+}
+.img-txt{
+    width: $width-420;
+}
+.img{
+    width: $width-420;
+    height: 280px;
+}
+.img-title{
+    text-transform: uppercase;
+    @extend %main-color;
+    margin: 10px 0;
+}
+h1{
+    font-size: 30px;
+    @extend %main-color;
+    margin: 20px 0;
+    @extend %main-font;
+}
+.article{
+    @extend %main-color;
+    @extend %main-font;
+}
+footer{
+    @include display2(flex,center);
+    button{
+        text-transform: capitalize;
+        width: 170px;
+        height: 60px;
+        @extend %main-font;
+    }
+}
