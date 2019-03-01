@@ -1655,3 +1655,7 @@ html {
         .section-7 .video-test .play-button .play-perspective .play-video .samsung-video {
           width: 320px;
           height: 300px; } }
+
+@media only screen and (max-width: 364px) {
+  .section-2 .section-2-wrapper .items-section-2 .section-2-item {
+    margin-left: 12.3333%; } }
