@@ -4,6 +4,16 @@
 @import 'fonts';
 
 
+@media screen and (min-width: 1400px) {
+    .section-10{
+        .section-10-wrapper{
+            width: 80%;
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 1200px) {
     .items-split{
         display: block;
@@ -584,7 +594,7 @@
                 width: 300px;
                 .section-2-item{
 
-                    margin-left: 25px;
+                    // margin-left: 25px;
                     height: 270px;
                     width: 230px;
                     &:hover{
@@ -670,6 +680,19 @@
                             height: 300px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 364px) {
+    .section-2{
+        .section-2-wrapper{
+            .items-section-2{
+                .section-2-item{
+                    margin-left: 12.3333%;
                 }
             }
         }

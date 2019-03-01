@@ -537,7 +537,7 @@ header {
         margin-left: 115px; }
       .section-6 .section-6-wrapper .section-6-imgs .right-screen {
         position: absolute;
-        height: 320;
+        height: 320px;
         margin: 130px 0 0 300px; }
 
 .section-7 {
@@ -1098,6 +1098,10 @@ header, header .header-section, header .header-section .header-middle, .section-
 html {
   font-family: 'Dosis', sans-serif; }
 
+@media screen and (min-width: 1400px) {
+  .section-10 .section-10-wrapper {
+    width: 80%; } }
+
 @media screen and (max-width: 1200px) {
   .items-split {
     display: block;
@@ -1602,7 +1606,6 @@ html {
       margin-top: 320px;
       width: 300px; }
       .section-2 .section-2-wrapper .items-section-2 .section-2-item {
-        margin-left: 25px;
         height: 270px;
         width: 230px; }
         .section-2 .section-2-wrapper .items-section-2 .section-2-item:hover {
@@ -1655,3 +1658,7 @@ html {
         .section-7 .video-test .play-button .play-perspective .play-video .samsung-video {
           width: 320px;
           height: 300px; } }
+
+@media only screen and (max-width: 364px) {
+  .section-2 .section-2-wrapper .items-section-2 .section-2-item {
+    margin-left: 12.3333%; } }
