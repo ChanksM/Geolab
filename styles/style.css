@@ -1098,6 +1098,10 @@ header, header .header-section, header .header-section .header-middle, .section-
 html {
   font-family: 'Dosis', sans-serif; }
 
+@media screen and (min-width: 1400px) {
+  .section-10 .section-10-wrapper {
+    width: 80%; } }
+
 @media screen and (max-width: 1200px) {
   .items-split {
     display: block;
